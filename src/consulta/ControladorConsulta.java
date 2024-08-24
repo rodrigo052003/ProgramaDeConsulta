@@ -5,7 +5,7 @@ import java.util.List;
 
 public class ControladorConsulta {
     private static ControladorConsulta instance;
-    private List<ConsultaInfo> consultas;
+    private List<Consultadados> consultas;
 
     private ControladorConsulta() {
         consultas = new ArrayList<>();
@@ -18,11 +18,11 @@ public class ControladorConsulta {
         return instance;
     }
 
-    public void agendarConsulta(ConsultaInfo consulta) {
+    public void agendarConsulta(Consultadados consulta) {
         consultas.add(consulta);
     }
 
-    public List<ConsultaInfo> getConsultas() {
+    public List<Consultadados> getConsultas() {
         return consultas;
     }
 }

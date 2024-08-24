@@ -3,13 +3,13 @@ package consulta;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-public class ConsultaInfo {
+public class Consultadados {
     private Paciente paciente;
     private Medico medico;
     private LocalDate data;
     private LocalTime hora;
 
-    public ConsultaInfo(Paciente paciente, Medico medico, LocalDate data, LocalTime hora) {
+    public Consultadados(Paciente paciente, Medico medico, LocalDate data, LocalTime hora) {
         this.paciente = paciente;
         this.medico = medico;
         this.data = data;

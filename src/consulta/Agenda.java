@@ -1,6 +1,5 @@
 package consulta;
 
-import consulta.ConsultaInfo;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
@@ -26,9 +25,9 @@ public class Agenda extends JFrame {
         atualizarTabela(controladorConsulta.getConsultas());
     }
 
-    private void atualizarTabela(List<ConsultaInfo> consultas) {
+    private void atualizarTabela(List<Consultadados> consultas) {
         modeloTabela.setRowCount(0); // Limpa a tabela
-        for (ConsultaInfo consulta : consultas) {
+        for (Consultadados consulta : consultas) {
             modeloTabela.addRow(new Object[]{
                     consulta.getPaciente().getNome(),
                     consulta.getMedico().getNome(),

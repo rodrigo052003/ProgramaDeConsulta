@@ -138,7 +138,7 @@ public class ProgramaGUI extends JFrame {
                         calendar.setTime((java.util.Date) timeSpinner.getValue());
                         LocalTime hora = LocalTime.of(calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE));
 
-                        for (ConsultaInfo consultaExistente : controladorConsulta.getConsultas()) {
+                        for (Consultadados consultaExistente : controladorConsulta.getConsultas()) {
                             if(consultaExistente.getMedico().equals(medico) &&
                                     consultaExistente.getData().equals(data) &&
                                     consultaExistente.getHora().equals(hora)) {
@@ -148,7 +148,7 @@ public class ProgramaGUI extends JFrame {
                         }
 
 
-                        ConsultaInfo consulta = new ConsultaInfo(paciente, medico, data, hora);
+                        Consultadados consulta = new Consultadados(paciente, medico, data, hora);
                         controladorConsulta.agendarConsulta(consulta);
                         atualizarConsultas();
                     }
@@ -235,7 +235,7 @@ public class ProgramaGUI extends JFrame {
         modeloTabela.setRowCount(0); // Limpa a tabela
         DateTimeFormatter formatterData = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         DateTimeFormatter formatterHora = DateTimeFormatter.ofPattern("HH:mm");
-        for (ConsultaInfo consulta : controladorConsulta.getConsultas()) {
+        for (Consultadados consulta : controladorConsulta.getConsultas()) {
             modeloTabela.addRow(new Object[]{
                     consulta.getPaciente().getNome(),
                     consulta.getMedico().getNome(),
