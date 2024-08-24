@@ -24,7 +24,6 @@ public class UsuarioRepository {
     }
 
     public void adicionarUsuario(Usuario usuario) {
-        usuarios.add(usuario);
-    }
+        usuarios.add(usuario);}
 }
 
