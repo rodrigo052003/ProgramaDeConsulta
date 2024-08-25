@@ -63,7 +63,6 @@ public class ProgramaGUI extends JFrame {
 
         // ActionListener para adicionar médicos
         btnAddMedico.addActionListener(new ActionListener() {
-            @Override
             public void actionPerformed(ActionEvent e) {
                 String nome = JOptionPane.showInputDialog(null, "Nome do Médico:", "Adicionar Médico", JOptionPane.PLAIN_MESSAGE);
                 String especialidade = JOptionPane.showInputDialog(null, "Especialidade Médica:", "Adicionar Médico", JOptionPane.PLAIN_MESSAGE);
@@ -76,7 +75,6 @@ public class ProgramaGUI extends JFrame {
 
         // ActionListener, isso foi criado adicionar pacientes
         btnAddPaciente.addActionListener(new ActionListener() {
-            @Override
             public void actionPerformed(ActionEvent e) {
                 String nome = JOptionPane.showInputDialog(null, "Nome do Paciente:", "Adicionar Paciente", JOptionPane.PLAIN_MESSAGE);
                 int idade = Integer.parseInt(JOptionPane.showInputDialog(null, "Idade do Paciente:", "Adicionar Paciente", JOptionPane.PLAIN_MESSAGE));
@@ -89,7 +87,6 @@ public class ProgramaGUI extends JFrame {
 
         // ActionListener,e esse outro para agendar consultas
         btnAgendarConsulta.addActionListener(new ActionListener() {
-            @Override
             public void actionPerformed(ActionEvent e) {
                 if (controladorMedico.getMedicos().isEmpty() || controladorPaciente.getPacientes().isEmpty()) {
                     JOptionPane.showMessageDialog(null, "Adicione médicos e pacientes primeiro.");
@@ -158,7 +155,6 @@ public class ProgramaGUI extends JFrame {
 
         // ActionListener foi criado para atualizar a agenda
         btnVerAgenda.addActionListener(new ActionListener() {
-            @Override
             public void actionPerformed(ActionEvent e) {
                 atualizarConsultas();
             }

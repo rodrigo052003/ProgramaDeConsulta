@@ -30,7 +30,7 @@ public class TelaDeEntradaDoPG extends JFrame {
         add(backgroundLabel);
 
         // Adiciona os componentes da interface por cima do background
-        JLabel lblFacalogin = new JLabel("FAÇA SEU LOGINN");
+        JLabel lblFacalogin = new JLabel("FAÇA SEU LOGIN");
         lblFacalogin.setBounds(320, 500, 200, 40);
         backgroundLabel.add(lblFacalogin);
 
@@ -55,7 +55,6 @@ public class TelaDeEntradaDoPG extends JFrame {
         backgroundLabel.add(btnLogin);
 
         btnLogin.addActionListener(new ActionListener() {
-            @Override
             public void actionPerformed(ActionEvent e) {
                 String usuario = txtUsuario.getText();
                 String senha = new String(txtSenha.getPassword());

@@ -23,7 +23,6 @@ public class Paciente {
         return idade;
     }
 
-    @Override
     public String toString() {
         return "Paciente [id=" + cod + ", nome=" + nome + ", idade=" + idade + "]";
     }

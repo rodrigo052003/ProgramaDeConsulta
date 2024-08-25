@@ -24,7 +24,6 @@ public class Medico {
         return especialidade;
     }
 
-    @Override
     public String toString() {
         return "Medico [Cod=" + cod + ", nome=" + nomeDoMedico + ", especialidade=" + especialidade + "]";
     }
