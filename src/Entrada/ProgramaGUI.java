@@ -1,4 +1,4 @@
-package gui;
+package Entrada;
 
 import consulta.*;
 import java.time.format.DateTimeFormatter;
@@ -75,7 +75,7 @@ public class ProgramaGUI extends JFrame {
             }
         });
 
-        // ActionListener, isso foi criado adicionar pacientes
+        // ActionListener para adicionar pacientes
         btnAddPaciente.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 String nome = JOptionPane.showInputDialog(null, "Nome do Paciente:", "Adicionar Paciente", JOptionPane.PLAIN_MESSAGE);
@@ -87,7 +87,7 @@ public class ProgramaGUI extends JFrame {
             }
         });
 
-        // ActionListener, e esse outro para agendar consultas
+        // ActionListener para agendar consultas
         btnAgendarConsulta.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 if (controladorMedico.getMedicos().isEmpty() || controladorPaciente.getPacientes().isEmpty()) {
@@ -154,7 +154,7 @@ public class ProgramaGUI extends JFrame {
             }
         });
 
-        // ActionListener foi criado para atualizar a agenda
+        // ActionListener para atualizar a agenda
         btnVerAgenda.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 atualizarConsultas();
@@ -243,7 +243,6 @@ public class ProgramaGUI extends JFrame {
                     consulta.getData().format(formatterData),
                     consulta.getHora().format(formatterHora)
             });
-
         }
     }
 }
